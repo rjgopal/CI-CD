@@ -11,7 +11,7 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class BrowserLaunch extends BaseClass {
 	
-	public static void selectBrowser() throws Throwable{
+	public void selectBrowser() throws Throwable{
 		
 		
 		String browser = PropertyFile("Browser", TestData);
@@ -20,8 +20,8 @@ public class BrowserLaunch extends BaseClass {
 		if (browser.equalsIgnoreCase("Chrome")) {
 			System.out.println("selecting chrome test");
 			WebDriverManager.chromedriver().setup();
-			ChromeOptions options = new ChromeOptions();
-			options.addArguments("--incognito");
+//			ChromeOptions options = new ChromeOptions();
+//			options.addArguments("--incognito");
 
 			driver = new ChromeDriver();
 			driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
