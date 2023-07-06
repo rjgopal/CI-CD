@@ -24,7 +24,7 @@ import com.google.common.util.concurrent.Uninterruptibles;
 
 public class BaseClass {
 
-	public static WebDriver driver;
+	public static  WebDriver driver;
 	public static String properties;
 	public static File Location;
 	public static String TestData = System.getProperty("user.dir") + "//TestData.properties";
@@ -126,20 +126,9 @@ public class BaseClass {
 		
 	}
 
-	public static String captureScreenshot() throws IOException {
-
-		File srcFiler = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
-		byte[] encoded;
-		try {
-			encoded = Base64.encodeBase64(FileUtils.readFileToByteArray(srcFiler));
-			String shot = new String(encoded, StandardCharsets.US_ASCII);
-			return shot;
-
-		} catch (IOException e) {
-			e.printStackTrace();
-
-		}
-		return null;
+	public static String captureScreenshot(){
+ 
+		return((TakesScreenshot)driver).getScreenshotAs(OutputType.BASE64);
 
 	}
 	
