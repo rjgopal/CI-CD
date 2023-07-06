@@ -5,11 +5,11 @@ import org.openqa.selenium.TakesScreenshot;
 
 import com.drivermanager.BaseClass;
 
-public class screenshot extends BaseClass {
+public final class screenshot extends BaseClass {
 
 	public static String captureScreenshot(){
 		 
-		return((TakesScreenshot)driver).getScreenshotAs(OutputType.BASE64);
-
+		 String screenone = ((TakesScreenshot)driver).getScreenshotAs(OutputType.BASE64);
+         return screenone;
 	}
 }
