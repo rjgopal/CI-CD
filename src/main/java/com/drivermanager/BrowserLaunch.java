@@ -11,7 +11,7 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class BrowserLaunch extends BaseClass {
 	
-	public void selectBrowser() throws Throwable{
+	public static  void selectBrowser() throws Throwable{
 		
 		
 		String browser = PropertyFile("Browser", TestData);

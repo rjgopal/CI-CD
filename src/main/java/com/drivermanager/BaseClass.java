@@ -24,7 +24,7 @@ import com.google.common.util.concurrent.Uninterruptibles;
 
 public class BaseClass {
 
-	public static  WebDriver driver;
+	public static WebDriver driver;
 	public static String properties;
 	public static File Location;
 	public static String TestData = System.getProperty("user.dir") + "//TestData.properties";

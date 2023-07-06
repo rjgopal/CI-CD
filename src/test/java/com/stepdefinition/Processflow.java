@@ -18,8 +18,7 @@ public class Processflow extends BaseClass {
 //			Reports.Report();
 //			Reports.ReportCreateFeatureTest("Process.feature");
 //			Reports.ReportCreateScenarioTest("Ordering and validating the product price and quantity");
-			BrowserLaunch launch = new BrowserLaunch();
-			launch.selectBrowser();
+			BrowserLaunch.selectBrowser();
 			waitUntil(500);
 			IsElementDisplayed(ow.logo);
 //			Reports.Givenlogpass("user_should_launch_the_web_url_and_homepage","Url and Homepage sucessfully launched");
