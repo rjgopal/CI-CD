@@ -126,10 +126,6 @@ public class BaseClass {
 		
 	}
 
-	public static String captureScreenshot(){
- 
-		return((TakesScreenshot)driver).getScreenshotAs(OutputType.BASE64);
-
-	}
+	
 	
 }

@@ -9,6 +9,7 @@ import com.aventstack.extentreports.MediaEntityBuilder;
 import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
 import com.aventstack.extentreports.reporter.configuration.Theme;
 import com.drivermanager.BaseClass;
+import com.utils.screenshot;
 
 public class Reports extends BaseClass {
 	public static ExtentHtmlReporter report;
@@ -60,68 +61,68 @@ public class Reports extends BaseClass {
 	}
 
 	public static void Givenlogpass(String givendetails, String passdetails) throws Throwable {
-		String ScreenShot = captureScreenshot();
+		String ScreenShot =  screenshot.captureScreenshot();
 		scenario.createNode(new GherkinKeyword("Given"), givendetails).pass(passdetails,
 				MediaEntityBuilder.createScreenCaptureFromBase64String(ScreenShot).build());
 
 	}
 
 	public static void PassedLogInfo(String givendetails, String passdetails) throws Throwable {
-		String ScreenShot = captureScreenshot();
+		String ScreenShot = screenshot.captureScreenshot();
 		scenario.createNode(new GherkinKeyword("Given"), givendetails).pass(passdetails,
 				MediaEntityBuilder.createScreenCaptureFromBase64String(ScreenShot).build());
 
 	}
 
 	public static void FailedLogInfo(String givendetails, String faildetails) throws Throwable {
-		String ScreenShot = captureScreenshot();
+		String ScreenShot =  screenshot.captureScreenshot();
 		scenario.createNode(new GherkinKeyword("Given"), givendetails).fail(faildetails,
 				MediaEntityBuilder.createScreenCaptureFromBase64String(ScreenShot).build());
 
 	}
 
 	public static void Whenlogpass(String whendetails, String passdetails) throws Throwable {
-		String ScreenShot = captureScreenshot();
+		String ScreenShot =  screenshot.captureScreenshot();
 		scenario.createNode(new GherkinKeyword("When"), whendetails).pass(passdetails,
 				MediaEntityBuilder.createScreenCaptureFromBase64String(ScreenShot).build());
 
 	}
 
 	public static void Thenlogpass(String thendetails, String passdetails) throws Throwable {
-		String ScreenShot = captureScreenshot();
+		String ScreenShot =  screenshot.captureScreenshot();
 		scenario.createNode(new GherkinKeyword("Then"), thendetails).pass(passdetails,
 				MediaEntityBuilder.createScreenCaptureFromBase64String(ScreenShot).build());
 
 	}
 
 	public static void Andlogpass(String anddetails, String passdetails) throws Throwable {
-		String ScreenShot = captureScreenshot();
+		String ScreenShot =  screenshot.captureScreenshot();
 		scenario.createNode(new GherkinKeyword("And"), anddetails).pass(passdetails,
 				MediaEntityBuilder.createScreenCaptureFromBase64String(ScreenShot).build());
 	}
 
 	public static void Givenlogfail(String givendetails, String faildetails) throws Throwable {
-		String ScreenShot = captureScreenshot();
+		String ScreenShot =  screenshot.captureScreenshot();
 		scenario.createNode(new GherkinKeyword("Given"), givendetails).fail(faildetails,
 				MediaEntityBuilder.createScreenCaptureFromBase64String(ScreenShot).build());
 	}
 
 	public static void Whenlogfail(String whendetails, String faildetails) throws Throwable {
-		String ScreenShot = captureScreenshot();
+		String ScreenShot =  screenshot.captureScreenshot();
 		scenario.createNode(new GherkinKeyword("When"), whendetails).fail(faildetails,
 				MediaEntityBuilder.createScreenCaptureFromBase64String(ScreenShot).build());
 
 	}
 
 	public static void Thenlogfail(String thendetails, String faildetails) throws Throwable {
-		String ScreenShot = captureScreenshot();
+		String ScreenShot =  screenshot.captureScreenshot();
 		scenario.createNode(new GherkinKeyword("Then"), thendetails).fail(faildetails,
 				MediaEntityBuilder.createScreenCaptureFromBase64String(ScreenShot).build());
 
 	}
 
 	public static void Andlogfail(String anddetails, String faildetails) throws Throwable {
-		String ScreenShot = captureScreenshot();
+		String ScreenShot =  screenshot.captureScreenshot();
 		scenario.createNode(new GherkinKeyword("And"), anddetails).fail(faildetails,
 				MediaEntityBuilder.createScreenCaptureFromBase64String(ScreenShot).build());
 	}
