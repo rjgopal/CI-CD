@@ -2,7 +2,7 @@ package com.stepdefinition;
 
 import com.drivermanager.BaseClass;
 import com.drivermanager.BrowserLaunch;
-//import com.genreports.Reports;
+import com.genreports.Reports;
 import com.pages.orderflow;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.When;
@@ -14,25 +14,25 @@ public class Processflow extends BaseClass {
 
 	@Given("User should launch the web url and homepage")
 	public void user_should_launch_the_web_url_and_homepage() throws Throwable {
-//    try {			
-//			Reports.Report();
-//			Reports.ReportCreateFeatureTest("Process.feature");
-//			Reports.ReportCreateScenarioTest("Ordering and validating the product price and quantity");
+    try {			
+			Reports.Report();
+			Reports.ReportCreateFeatureTest("Process.feature");
+			Reports.ReportCreateScenarioTest("Ordering and validating the product price and quantity");
 			BrowserLaunch.selectBrowser();
 			waitUntil(500);
 			IsElementDisplayed(ow.logo);
-//			Reports.Givenlogpass("user_should_launch_the_web_url_and_homepage","Url and Homepage sucessfully launched");
+			Reports.Givenlogpass("user_should_launch_the_web_url_and_homepage","Url and Homepage sucessfully launched");
 			
-//		} catch (Exception e) {
+		} catch (Exception e) {
 			
-//			Reports.Givenlogfail("user_should_launch_the_web_url_and_homepage","Url and Homepage is not sucessfully launched");
-//		}
+			Reports.Givenlogfail("user_should_launch_the_web_url_and_homepage","Url and Homepage is not sucessfully launched");
+		}
 	}
 
 	@When("User should select and add the first product to cart")
 	public void user_should_select_and_add_the_first_product_to_cart() throws Throwable {
 		
-//		try {
+		try {
 			TypeDataInTheField(ow.searchbox, (PropertyFile("Product", TestData)));
 			Click(ow.searchbutton);
 			Click(ow.product);
@@ -42,15 +42,15 @@ public class Processflow extends BaseClass {
 			waitUntil(500);
 			//IsElementDisplayed(ow.cart);
 			waitUntil(500);
-//			Reports.Whenlogpass("user_should_select_and_add_the_first_product_to_cart",
-//					"Product added to cart sucessfully");
+			Reports.Whenlogpass("user_should_select_and_add_the_first_product_to_cart",
+					"Product added to cart sucessfully");
 			
-//		} catch (Exception e) {
+		} catch (Exception e) {
 			
-//			Reports.Whenlogfail("user_should_select_and_add_the_first_product_to_cart",
-//					"Product not added to cart sucessfully");
-//		}
-//		Reports.ReportCooldown();
+			Reports.Whenlogfail("user_should_select_and_add_the_first_product_to_cart",
+					"Product not added to cart sucessfully");
+		}
+		Reports.ReportCooldown();
 		driver.quit();
 	}
 
