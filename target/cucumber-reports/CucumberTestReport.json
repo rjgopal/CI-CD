@@ -11,7 +11,7 @@
         "steps": []
       },
       {
-        "start_timestamp": "2023-07-06T08:04:58.778Z",
+        "start_timestamp": "2023-07-07T05:16:25.243Z",
         "line": 3,
         "name": "Checking the order can be placed by guest user",
         "description": "",
@@ -21,7 +21,7 @@
         "steps": [
           {
             "result": {
-              "duration": 6106156500,
+              "duration": 5478712200,
               "status": "passed"
             },
             "line": 4,
@@ -33,7 +33,7 @@
           },
           {
             "result": {
-              "duration": 9845659900,
+              "duration": 9186456700,
               "status": "passed"
             },
             "line": 5,
